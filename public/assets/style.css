@@ -1,0 +1,650 @@
+/* Importación de Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Signika+Negative:wght@300..700&display=swap");
+
+/* Custom CSS */
+body {
+  background-color: #f3f3f3;
+  font-family: "Signika Negative", sans-serif;
+  width: auto;
+  box-sizing: content-box;
+  margin: 0 auto;
+  overflow-y: auto; /* Permite el desplazamiento vertical */
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+}
+
+/* Zona login y registro */
+/* Solo register */
+.card-login {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  text-align: center; /* Centrar el contenido */
+}
+
+.card-title-login {
+  margin-top: 0; /* Eliminar el margen superior por defecto */
+}
+
+.form-control-login {
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 2px solid #cccccc;
+  border-radius: 0;
+  padding: 0.5rem 0; /* Reducir el espacio entre los campos */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  font-size: 0.875rem; /* Reduce el tamaño de la fuente */
+}
+
+.form-floating-login {
+  margin-bottom: 1rem; /* Reducir el espacio entre filas de campos */
+}
+
+/* Login & Register */
+
+/* Estilo para la posición de la marca del navbar */
+.position-absolute {
+  position: absolute;
+  z-index: 3;
+}
+
+.navbar__image {
+  width: 10px; /* Ajusta el tamaño deseado de la imagen */
+  margin-right: 10px; /* Ajusta la separación derecha de la imagen */
+}
+
+.container-login {
+  background-color: #f9f9f9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.876);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px; /* Agrandar el formulario a lo ancho */
+}
+
+.card-login:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title-login {
+  color: #8b0303;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.form-floating-login {
+  position: relative;
+  margin-bottom: 1rem; /* Reducir el espacio entre filas de campos */
+}
+
+.form-floating-login .form-control-login {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #cccccc;
+  border-radius: 0;
+  padding: 0.5rem 0; /* Reducir el espacio entre los campos */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  font-size: 0.875rem; /* Reduce el tamaño de la fuente */
+}
+
+.form-floating-login .form-control-login:focus {
+  border-color: #8b0303;
+  box-shadow: none;
+}
+
+.form-floating-login label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  color: #8b0303;
+  padding-left: 1.5rem;
+  font-size: 0.875rem; /* Reduce el tamaño de la fuente */
+}
+
+.form-floating-login .form-control-login:focus ~ label,
+.form-floating-login .form-control-login:not(:placeholder-shown) ~ label {
+  top: -1.5rem;
+  left: 0;
+  font-size: 0.75rem;
+  color: #8b0303;
+  padding-left: 1.5rem;
+}
+
+.invalid-feedback-login {
+  color: red;
+  font-size: 0.6rem;
+  min-height: 1.8rem; /* Ajusta esta altura según tus necesidades */
+  visibility: hidden; /* Oculta el mensaje cuando no hay contenido */
+}
+
+.invalid-feedback-login::before {
+  content: " "; /* Agrega un contenido vacío para asegurar el tamaño mínimo */
+}
+
+.invalid-feedback-login:not(:empty) {
+  visibility: visible; /* Muestra el mensaje cuando hay contenido */
+}
+
+.btn-primary-login {
+  background-color: #8b0303;
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.btn-primary-login:hover {
+  background-color: #6a0202;
+  box-shadow: 0 4px 6px rgb(139, 139, 139);
+}
+
+.text-link-login {
+  color: #8b0303;
+  text-decoration: underline;
+}
+
+.text-link-login:hover {
+  color: #6a0202;
+}
+
+.text-gray-600-login {
+  color: #666666;
+}
+
+.text-gray-600-login:hover {
+  color: #000000;
+}
+
+.form-check-input-login {
+  margin-right: 0.5rem;
+}
+
+.form-check-label-login {
+  color: #8b0303;
+}
+
+.container-login {
+  position: relative;
+}
+
+.container-login-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%; /* Ajusta el ancho de la imagen al lado del formulario */
+  background-color: #f9f9f9; /* Color de fondo para la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container-login-image img {
+  width: 100%; /* Ajusta la imagen para llenar el contenedor */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Zona inicio */
+/* Barra del menú */
+
+/* Personalización del ícono del menú hamburguesa */
+.navbar-toggler {
+  border: none; /* Opcional: elimina el borde del botón */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-custom {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.637); /* Negro con 50% de opacidad */
+}
+
+.navbar-crud {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.637); /* Negro con 50% de opacidad */
+}
+
+.navbar__image {
+  width: 5em;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  transform: scale(1.04);
+}
+
+.text-light-custom {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Carruserl */
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-item img,
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+/* Cajon de eventos */
+.event-title {
+  color: #8b0303; /* Color oscuro de la paleta de colores */
+  font-size: 2rem; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  text-transform: uppercase; /* Transformación del texto a mayúsculas */
+}
+
+/* Zona de promoción de registro */
+.promocion__container {
+  max-width: 100%;
+}
+
+.card {
+  margin: auto;
+  margin-bottom: 1.5rem; /* Margen inferior */
+}
+
+.card-body {
+  text-align: center;
+}
+
+.btn-primary.promocion__btn {
+  background-color: #8b0303; /* Color personalizado del botón */
+  border-color: #8b0303; /* Color personalizado del borde del botón */
+}
+
+.btn-primary.promocion__btn:hover {
+  background-color: #ff4040; /* Color personalizado del botón al pasar el cursor */
+  border-color: #ff4040; /* Color personalizado del borde del botón al pasar el cursor */
+}
+
+.promocion__container {
+  margin-bottom: 1.5rem; /* Margen inferior */
+}
+
+/* Zona de clases */
+.container {
+  margin-top: 2rem;
+}
+
+.section-title {
+  color: #8b0303;
+  border-bottom: 3px solid #8b0303;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.custom-card {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 3px solid #8b0303;
+  color: #ffffff;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-card .card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.custom-card .card-body {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.custom-card .card-title {
+  color: #ff4040;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.custom-card .card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.custom-card::before {
+  content: "";
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.custom-btn {
+  background-color: #8b0303;
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.custom-btn:hover {
+  background-color: #6a0202;
+}
+
+.custom-btn-danger {
+  background-color: #b30000;
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.custom-btn-danger:hover {
+  background-color: #8b0000;
+}
+
+.custom-modal {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  border-radius: 10px;
+  position: static;
+  overflow: hidden;
+}
+
+.custom-modal .modal-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+
+.custom-modal .modal-title {
+  color: #ffffff;
+}
+
+.custom-modal .modal-body {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-close {
+  background-color: #8b0303;
+  border: none;
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.btn-close:hover {
+  background-color: #6a0202;
+}
+
+.custom-btn-toggle {
+  background-color: #2c2c2c;
+  border: 2px solid #8b0303;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  margin: 0 0.5rem; /* Separar los botones entre sí */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.custom-btn-toggle.active,
+.custom-btn-toggle:hover {
+  background-color: #8b0303;
+  color: #ffffff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-btn-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 3, 3, 0.4);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Zona administradora */
+.admin-btn-toggle {
+  background-color: #2c2c2c;
+  border: 2px solid #8b0303;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  margin: 0 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.admin-btn-toggle.active,
+.admin-btn-toggle:hover {
+  background-color: #8b0303;
+  color: #ffffff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-btn-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 3, 3, 0.4);
+}
+
+.admin-alert-success,
+.admin-alert-danger {
+  border-color: #8b0303;
+}
+
+.admin-card {
+  margin: auto;
+}
+
+.admin-card-header {
+  padding: 1.5rem; /* Ajuste del padding del encabezado */
+  height: auto; /* Ajuste de la altura del encabezado */
+  text-align: center; /* Centrar texto en el encabezado */
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos a los extremos */
+  align-items: center; /* Centra verticalmente */
+}
+
+.admin-card-body {
+  text-align: center;
+}
+
+.bg-admin {
+  background-color: #8b0303 !important;
+}
+
+.admin-btn-create {
+  background-color: #ffffff;
+  border: 2px solid #8b0303;
+  color: #8b0303;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  padding: 0.35rem 1rem;
+}
+
+.admin-btn-create:hover {
+  background-color: #8b0303;
+  color: #ffffff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-btn-show {
+  background-color: #2c2c2c;
+  border: 2px solid #007bff;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.admin-btn-show:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-btn-edit {
+  background-color: #2c2c2c;
+  border: 2px solid #28a745;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.admin-btn-edit:hover {
+  background-color: #28a745;
+  color: #ffffff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-btn-delete {
+  background-color: #2c2c2c;
+  border: 2px solid #dc3545;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+}
+
+.admin-btn-delete:hover {
+  background-color: #dc3545;
+  color: #ffffff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+.footer-title {
+  color: #ffffff; /* Color oscuro de la paleta de colores */
+  font-size: 2rem; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de la fuente */
+  text-transform: uppercase; /* Transformación del texto a mayúsculas */
+}
+
+/* Responsive personalizado */
+
+/* Reglas para pantallas de 768px o menos */
+@media (max-width: 768px) {
+  /* Imagen login */
+  .container-login-image {
+    display: none;
+  }
+
+  /* Barra del menú */
+  .navbar__image {
+    width: 3em;
+  }
+
+  /* Tamaño de imagenes */
+  .event__width__images {
+    width: 15em;
+    margin-top: 3em; /* Margen superior de 3 em */
+    margin-bottom: 1em; /* Margen superior de 4 em */
+  }
+  /* Zona de contenido central del index */
+  .info__container {
+    display: flex;
+    flex-wrap: wrap; /* Esto hace que los elementos pasen a la siguiente línea si no hay espacio suficiente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-top: 1em; /* Margen superior de 5 em */
+  }
+
+  .info__item {
+    margin: 1em; /* Margen entre los elementos */
+  }
+
+  .info__width__images {
+    width: 15em;
+  }
+}
+
+/* Reglas para pantallas de 425px o menos */
+@media (max-width: 425px) {
+  /* Tamaño de imagenes */
+  .event__width__images {
+    width: 15em;
+    margin-top: 3em; /* Margen superior de 3 em */
+    margin-bottom: 1em; /* Margen superior de 4 em */
+  }
+
+  .info__width__images {
+    width: 15em;
+  }
+
+  /* Zona de contenido central del index */
+
+  .mostrar {
+    display: none;
+  }
+}

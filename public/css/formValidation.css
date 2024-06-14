@@ -1,0 +1,12 @@
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.is-valid {
+  border-color: #28a745 !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.6rem;
+}
